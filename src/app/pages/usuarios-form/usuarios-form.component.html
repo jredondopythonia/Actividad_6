@@ -1,0 +1,35 @@
+<section class="container card shadow p-3 mb-5 bg-white rounded">
+    <h1>Formulario de usuarios</h1>
+    <hr>
+    <form class="d-flex flex-column gap-3"  [formGroup]="userForm" (ngSubmit)="getDataForm()">
+        <input type="hidden" formControlName="_id">
+        <div class="form-group">
+            <label for="first_name">Nombre</label>
+            <input type="text" class="form-control" id="first_name" placeholder="Nombre" formControlName="first_name">
+        </div>
+        <div class="form-group">
+            <label for="last_name">Apellidos</label>
+            <input type="text" class="form-control" id="last_name" placeholder="Apellidos" formControlName="last_name">
+        </div>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Nombre de Usuario" formControlName="username">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Email" formControlName="email">
+        </div>
+        <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input type="password" class="form-control" id="password" placeholder="Contraseña" formControlName="password">
+        </div>
+        <div class="form-group">
+            <label for="image">Imagen</label>
+            <input type="text" class="form-control" id="image" placeholder="URL Imagen" formControlName="image">
+        </div>
+        <div class="d-flex justify-content-between">   
+            <button class="btn btn-secondary" [routerLink]="['/home']">Volver</button> 
+            <input type="submit" class="btn btn-primary" [value]="title">
+        </div>
+    </form>
+</section>

@@ -1,0 +1,27 @@
+.card-img-top{
+    max-width: 256px;
+    
+    :hover{
+        cursor: pointer;
+    }
+}
+
+.card-body {
+    width: 100%;
+    background-color: transparent;
+    text-align: center;
+    a{
+        cursor: pointer;
+        text-decoration: none;
+
+        :hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.card-footer {
+    width: 100%;
+    background-color: transparent;
+}

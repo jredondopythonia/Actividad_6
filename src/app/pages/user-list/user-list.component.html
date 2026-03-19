@@ -1,0 +1,34 @@
+@if(isLoading === true){
+  <div class="d-flex justify-content-center align-items-center vh-100 gap-3">
+    <div class="spinner-border text-primary" role="status">
+    </div>
+    <span class="sr-only">Cargando...</span>
+  </div>
+}
+  
+@if(isLoading === false){
+  <section class="usuarios">
+    <div class="d-flex justify-content-between mb-3">
+      @if (enablePrevBtn){
+        <button class="btn btn-primary" (click)="gotoPrev()"><< Página anterior</button>
+      }@else{
+        <button class="btn btn-outline-primary" disabled><< Página anterior</button>
+      }
+
+      <p>Página {{page}} de {{total_pages}}</p>
+
+      @if (enableNextBtn){
+        <button class="btn btn-primary" (click)="gotoNext()">Siguiente Página >></button>
+      }@else{
+        <button class="btn btn-outline-primary" disabled>Siguiente Página >></button>
+      }
+    </div>
+    <div class="row g-5 justify-content-center">
+      @for(usuario of arrUsuarios; track usuario.id){
+        <article class="col-12 col-md-6 col-xl-4">
+          <app-usuario-card [selectedUser] = "usuario"></app-usuario-card>
+        </article>
+      }
+    </div>
+  </section>
+}

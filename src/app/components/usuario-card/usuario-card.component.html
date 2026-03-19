@@ -1,0 +1,20 @@
+<div class="card p-4 shadow align-items-center">
+    <a [routerLink]="['/user', selectedUser._id]">
+        <img src="{{selectedUser.image}}" class="card-img-top rounded-circle" alt="...">
+    </a>
+    <!-- <div class="card-body">
+      <a class="card-body__link" [routerLink]="['/user', selectedUser._id]">
+        <h5 class="card-title text-primary fs-6"></h5>
+      </a>
+    </div> -->
+
+    <div class="card-body">
+      <a [routerLink]="['/user', selectedUser._id]">
+        <h5 class="card-title text-primary fs-6">{{selectedUser.first_name}} {{selectedUser.last_name}}</h5>
+      </a>
+    </div>
+
+    <div class="card-footer">
+      <app-buttons [selectedUser]="selectedUser" ></app-buttons>
+    </div>
+</div>

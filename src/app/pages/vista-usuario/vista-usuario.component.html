@@ -1,0 +1,26 @@
+
+
+@if(isLoading === true){
+  <div class="d-flex justify-content-center align-items-center vh-100 gap-3">
+    <div class="spinner-border text-primary" role="status">
+    </div>
+    <span class="sr-only">Cargando...</span>
+  </div>
+}
+
+@if(isLoading === false){
+  <section class="shadow p-4">
+    <div class="row align-items-center">
+      <figure class="col-12 col-md-3">
+        <img class="img-fluid rounded-circle" [src]="usuario.image" [alt]="usuario.username">
+      </figure>
+      <div class="col-12 col-md-9 border-start border-primary p-5 d-flex flex-column justify-content-center gap-2">
+        <h1 class="text-dark">{{usuario.first_name}}</h1>
+        <h1 class="text-dark">{{usuario.last_name}}</h1>
+        <p class="text"> <span class="fw-bold">Nombre de usuario: </span> {{usuario.username}}</p>
+        <p class="text"> <span class="fw-bold">Email: </span> {{usuario.email}}</p>
+        <app-buttons [selectedUser]="usuario" [volver]="true"></app-buttons>
+      </div>
+    </div>
+</section>
+}
