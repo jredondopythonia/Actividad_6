@@ -1,0 +1,221 @@
+.user-detail {
+  min-height: 100vh;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.user-detail--loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-detail__loader {
+  padding: 2rem;
+}
+
+.user-detail__spinner {
+  width: 3.5rem;
+  height: 3.5rem;
+  color: #4d8076;
+}
+
+.user-detail__loading-text {
+  color: #6f7c67;
+  font-weight: 600;
+}
+
+.user-detail__card {
+  border-radius: 30px;
+  background: linear-gradient(180deg, #fcfcf8 0%, #f5f7ef 100%);
+  box-shadow: 0 22px 48px rgba(55, 75, 53, 0.1);
+  overflow: hidden;
+}
+
+.user-detail__hero {
+  height: 120px;
+  background: linear-gradient(135deg, #5e7352 0%, #4d8076 45%, #3d6e9f 100%);
+  position: relative;
+}
+
+.user-detail__hero::before {
+  content: "";
+  position: absolute;
+  top: -45px;
+  right: -35px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.user-detail__hero::after {
+  content: "";
+  position: absolute;
+  bottom: -70px;
+  left: -30px;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.user-detail__body {
+  position: relative;
+}
+
+.user-detail__aside {
+  position: relative;
+  background: linear-gradient(180deg, #f4f7ed 0%, #edf3f3 100%);
+  border-right: 1px solid rgba(93, 115, 82, 0.12);
+}
+
+.user-detail__avatar-wrapper {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  padding: 8px;
+  background: linear-gradient(135deg, #5e7352 0%, #4d8076 45%, #3d6e9f 100%);
+  box-shadow: 0 16px 34px rgba(61, 110, 159, 0.16);
+  margin: -110px auto 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.user-detail__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  border: 5px solid #fff;
+}
+
+.user-detail__pill {
+  background: linear-gradient(135deg, #e7efe2 0%, #d9e4d5 100%);
+  color: #55683f;
+  border: 1px solid #cfdbc5;
+  box-shadow: 0 8px 18px rgba(85, 104, 63, 0.08);
+}
+
+.user-detail__full-name {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #334126;
+  line-height: 1.2;
+}
+
+.user-detail__username {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6d7c5a;
+}
+
+.user-detail__main {
+  background: linear-gradient(180deg, #fcfcf8 0%, #f8faf4 100%);
+}
+
+.user-detail__content {
+  max-width: 760px;
+}
+
+.user-detail__title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #314027;
+}
+
+.user-detail__subtitle {
+  color: #75816b;
+  font-size: 1rem;
+  max-width: 540px;
+}
+
+.user-detail__info-box {
+  height: 100%;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid #e4ead9;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(61, 92, 74, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user-detail__info-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 26px rgba(61, 92, 74, 0.08);
+}
+
+.user-detail__label {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #748066;
+  margin-bottom: 0.45rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.user-detail__value {
+  font-size: 1rem;
+  color: #24311d;
+  word-break: break-word;
+}
+
+.user-detail__actions {
+  max-width: 560px;
+}
+
+@media (max-width: 991px) {
+  .user-detail__aside {
+    border-right: 0;
+    border-bottom: 1px solid rgba(93, 115, 82, 0.12);
+  }
+
+  .user-detail__main {
+    text-align: center;
+  }
+
+  .user-detail__subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .user-detail__actions {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .user-detail {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .user-detail__card {
+    border-radius: 22px;
+  }
+
+  .user-detail__hero {
+    height: 95px;
+  }
+
+  .user-detail__avatar-wrapper {
+    width: 145px;
+    height: 145px;
+    margin-top: -82px;
+  }
+
+  .user-detail__title {
+    font-size: 1.5rem;
+  }
+
+  .user-detail__full-name {
+    font-size: 1.35rem;
+  }
+
+  .user-detail__info-box {
+    border-radius: 16px;
+  }
+}

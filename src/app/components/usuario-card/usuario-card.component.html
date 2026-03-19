@@ -1,20 +1,35 @@
-<div class="card p-4 shadow align-items-center">
-    <a [routerLink]="['/user', selectedUser._id]">
-        <img src="{{selectedUser.image}}" class="card-img-top rounded-circle" alt="...">
+<div class="card user-card border-0 h-100 overflow-hidden">
+  <div class="user-card__top"></div>
+
+  <div class="card-body user-card__body">
+    <a [routerLink]="['/user', selectedUser._id]" class="user-card__image-link">
+      <div class="user-card__avatar">
+        <img
+          [src]="selectedUser.image"
+          [alt]="selectedUser.first_name + ' ' + selectedUser.last_name"
+          class="user-card__image"
+        >
+      </div>
     </a>
-    <!-- <div class="card-body">
-      <a class="card-body__link" [routerLink]="['/user', selectedUser._id]">
-        <h5 class="card-title text-primary fs-6"></h5>
-      </a>
-    </div> -->
 
-    <div class="card-body">
-      <a [routerLink]="['/user', selectedUser._id]">
-        <h5 class="card-title text-primary fs-6">{{selectedUser.first_name}} {{selectedUser.last_name}}</h5>
+    <div class="user-card__content">
+      <a [routerLink]="['/user', selectedUser._id]" class="user-card__name-link">
+        <h5 class="user-card__title">
+          {{selectedUser.first_name}} {{selectedUser.last_name}}
+        </h5>
       </a>
-    </div>
 
-    <div class="card-footer">
-      <app-buttons [selectedUser]="selectedUser" ></app-buttons>
+      <p class="user-card__subtitle mb-1">
+        &#64;{{selectedUser.username}}
+      </p>
+
+      <p class="user-card__text mb-0">
+        Perfil de usuario
+      </p>
     </div>
+  </div>
+
+  <div class="card-footer user-card__footer border-0 bg-transparent">
+    <app-buttons [selectedUser]="selectedUser"></app-buttons>
+  </div>
 </div>

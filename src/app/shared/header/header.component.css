@@ -1,4 +1,146 @@
-.logo {
-    max-width: 256px;
-    margin: 0;
-}  
+.app-navbar {
+  background: linear-gradient(135deg, #4f6f52 0%, #3f7d73 45%, #2f5f98 100%);
+  box-shadow: 0 10px 30px rgba(22, 36, 30, 0.18);
+  position: relative;
+  overflow: hidden;
+}
+
+.app-navbar::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 220px;
+  height: 220px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+
+.app-navbar::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: -60px;
+  width: 260px;
+  height: 260px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+}
+
+.app-navbar__container {
+  position: relative;
+  z-index: 1;
+}
+
+.app-navbar__brand {
+  color: #fff;
+}
+
+.app-navbar__logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(6px);
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease;
+}
+
+.app-navbar__brand:hover .app-navbar__logo {
+  transform: rotate(-6deg) scale(1.04);
+}
+
+.app-navbar__brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.app-navbar__eyebrow {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 0.1rem;
+}
+
+.app-navbar__title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+}
+
+.app-navbar__menu {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.45rem;
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+}
+
+.app-navbar__link {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 1.2rem !important;
+  border-radius: 14px;
+  transition: all 0.25s ease;
+}
+
+.app-navbar__link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.app-navbar__link--cta {
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.app-navbar__link--cta:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.app-navbar__toggler {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 14px;
+  padding: 0.45rem 0.7rem;
+  box-shadow: none !important;
+}
+
+.app-navbar__toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.16) !important;
+}
+
+@media (max-width: 991px) {
+  .app-navbar__menu {
+    margin-top: 1rem;
+    align-items: stretch !important;
+  }
+
+  .app-navbar__link {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .app-navbar__logo {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+  }
+
+  .app-navbar__title {
+    font-size: 1.35rem;
+  }
+
+  .app-navbar__eyebrow {
+    font-size: 0.7rem;
+  }
+}
